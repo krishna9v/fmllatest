@@ -1,0 +1,54 @@
+
+
+
+
+
+<div  [hidden]="userauth" >
+
+  <h1 class="header" style="text-align: center">hay user you have to login first </h1>
+
+</div>
+
+<div [hidden]="!userauth" >
+
+<h1> welcome user  : {{ this.username }}....!</h1>
+<div class="container class1" >
+    <div *ngFor="let item of arrayOne(num1); let i = index;">
+    <div class="thumbnail">
+    <div>
+      <img src="{{'https://image.tmdb.org/t/p/w500'+data1.results[i].poster_path}}" alt="" width="200" height="200" class="left"> 
+    </div>
+    <div class="data">								
+    <button class="btn btn-lg btn-outline-primary" (click)="open(content)"><h3>{{data1.results[i].title}} </h3></button>
+    {{data1.results[i].id}}
+    {{data1.results[i].overview}}
+    </div>				
+    </div>
+    <ng-template #content let-c="close" let-d="dismiss">
+        <div class="modal-header">
+          <h4 class="modal-title">LATEST MOVIES</h4>
+          <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+    <table>
+    <tbody>
+    <tr><td><h1>{{data1.results[i].title}}</h1></td></tr>
+    <tr> 
+    <td><img src="{{'https://image.tmdb.org/t/p/w500'+data1.results[i].poster_path}}" width="200px" height="300px"></td>
+    </tr>
+    
+    <tr><td>{{data1.results[i].id}}</td></tr>
+    <tr><td>{{data1.results[i].overview}}</td></tr>
+    </tbody>
+    </table>
+    </div>
+    </ng-template>
+    </div>
+    </div>
+    
+    
+    
+
+</div>

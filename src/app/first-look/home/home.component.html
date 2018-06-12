@@ -1,0 +1,115 @@
+
+<div [hidden]="userauth" >
+  
+    <h1 class="header" style="text-align: center" > hay user you have to login first </h1>
+
+
+    
+
+
+
+</div>
+
+
+
+<div  [hidden]="!userauth" >
+
+     
+  <!--  to get user data from query  -->
+    <div *ngFor="let user of Movies_list_from_database | async">   
+
+                 {{ assign(user.movies_list,user.lastupdated) }} 
+ 
+            </div>
+
+            <!--  up to here .. -->
+    <h1> welcome user  : {{ this.username }}....!</h1>
+
+    <div class="alert alert-danger alert-dismissible"   [hidden]="!overload" >
+        
+       <h1><strong>Warning..!</strong> This user only select only maxium of 8 movies per week</h1> 
+      </div>
+      <p  style="text-align: center" > Grid update Date  : {{ time_date_now  }}</p>
+    <div class="main">
+    
+      <div class="grid-container"  > 
+
+          
+    
+        <div class="box">
+    <!-- 
+          <h3 class="h3-color" (click)="removeItem($event)" id=0> </h3> -->
+            
+            
+            <!-- {{ this.movies[0] }} -->
+            <img  class="leftimg" *ngIf ="this.movies[0]" (click)="removeItem($event)" id = "0"  src="{{'https://image.tmdb.org/t/p/w500'+data1.results[this.movies[0]].poster_path}}" alt="" width="195" height="295" border-radius ="25px">
+          
+          
+          
+          <!--h5>{{ name }}</h5-->
+        
+          </div>
+    
+          <div class="box">
+    
+              <!-- <h3 class="h3-color" (click)="removeItem($event)" id=1>{{ this.movies[1]}}</h3> -->
+              <img class="leftimg" *ngIf = "this.movies[1]"  (click)="removeItem($event)" id = "1"  src="{{'https://image.tmdb.org/t/p/w500'+data1.results[this.movies[1]].poster_path}}" alt="" width="195" height="295">
+            </div>
+    
+            <div class="box">
+    
+                <!-- <h3 class="h3-color" (click)="removeItem($event)" id=2>{{ this.movies[2]}}</h3> -->
+                <img  class="leftimg" *ngIf= "this.movies[2]" (click)="removeItem($event)" id = "2"  src="{{'https://image.tmdb.org/t/p/w500'+data1.results[this.movies[2]].poster_path}}" alt="" width="195" height="295">
+              </div>
+    
+              <div class="box">
+    
+                  <!-- <h3 class="h3-color" (click)="removeItem($event)" id=3>{{ this.movies[3]}}</h3> -->
+                  <img   class="leftimg" *ngIf= "this.movies[3]" (click)="removeItem($event)" id = "3"  src="{{'https://image.tmdb.org/t/p/w500'+data1.results[this.movies[3]].poster_path}}" alt="" width="195" height="295">
+                </div>
+    
+                <div class="box">
+    
+                    <!-- <h3 class="h3-color"  (click)="removeItem($event)" id=4>{{ this.movies[4]}}</h3> -->
+                    <img  class="leftimg" *ngIf = "this.movies[4]" (click)="removeItem($event)" id = "4"  src="{{'https://image.tmdb.org/t/p/w500'+data1.results[this.movies[4]].poster_path}}" alt="" width="195" height="295">
+                  </div>
+    
+                  <div class="box">
+    
+                      <!-- <h3 class="h3-color" (click)="removeItem($event)" id=5>{{ this.movies[5]}}</h3> -->
+                      <img  class="leftimg" *ngIf="this.movies[5]" (click)="removeItem($event)" id = "5"  src="{{'https://image.tmdb.org/t/p/w500'+data1.results[this.movies[5]].poster_path}}" alt="" width="195" height="295">
+                    </div>
+    
+                    <div class="box">
+    
+                        <!-- <h3 class="h3-color"  (click)="removeItem($event)" id=6>{{ this.movies[6]}}</h3> -->
+                        <img class="leftimg" *ngIf = "this.movies[6]" (click)="removeItem($event)" id = "6"  src="{{'https://image.tmdb.org/t/p/w500'+data1.results[this.movies[6]].poster_path}}" alt="" width="195" height="295">
+                      </div>  <div class="box">
+    
+                          <!-- <h3 class="h3-color"  (click)="removeItem($event)" id=7>{{ this.movies[7]}}</h3> -->
+                          <img class="leftimg" *ngIf = "this.movies[7]" (click)="removeItem($event)" id = "7"  src="{{'https://image.tmdb.org/t/p/w500'+data1.results[this.movies[7]].poster_path}}" alt="" width="95" height="195">
+                        </div>
+
+                        <button  [hidden]="save_status" type="button"   class="button buttonsubmit" (click)="sendData()" ><h4 style=" text-align: center"> save</h4></button>
+                        <p [hidden]="!save_status" >  changes are  saved.... </p>
+                    </div>
+
+    <div style="height:500px;line-height:10em;overflow-x:hidden;padding:5px">
+      <div class="wrapper"  >
+          
+          <div class="nested">
+              <div *ngFor="let item of arrayOne(num1); let i = index;"  >
+                  <img  class="rtimg" (click)="onclick($event)" id = "{{i}}"  src="{{'https://image.tmdb.org/t/p/w500'+data1.results[i].poster_path}}" alt="" width="150" height="150">
+
+                  <!-- <p (click)="onclick($event)" id = "{{i}}">{{data1.results[i].title}}</p> -->
+                </div>
+            
+          </div>
+
+        </div>
+      </div>
+       
+         </div>
+
+         <button mat-raised-button color="primary">Primary</button>
+        

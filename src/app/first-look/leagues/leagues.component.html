@@ -1,0 +1,123 @@
+<body >   <!-- for collections -->
+
+    <div [hidden]="userauth" >
+  
+            <h1 class="header" style="text-align: center" > hay user you have to login first </h1>
+        
+        
+            
+        
+        
+        
+        </div>
+        
+<div [hidden] = "!userauth" >
+
+        <h1>Reviews</h1>
+
+    <table border="1" align="center" >
+
+        <label>Please Register For Feedback</label> 
+        <form  >   
+        <tr> <td>Movie Name:</td><td><input name="uname" [(ngModel)]="Nusername" placeholder="movie name"></td>
+        </tr>
+        <tr> <td>Comments:</td><td><input name="content" [(ngModel)]="Ncontent" placeholder="Eg:Awesome!"></td>
+        </tr>
+        <tr> <td>Rating:</td><td><input  name="likes" type="number" [(ngModel)]="Nlikes" placeholder="Eg:10"></td>
+        </tr>
+        <tr><td><input type="reset"></td><td><input   type="submit" (click)="newUser()"></td></tr>
+      
+      
+      </form>
+
+      </table>
+
+      <br><br>
+      <div [hidden]="update_bit" align = "center" >
+          <table >
+            <tr> <td> Update comment here:</td><td><input [(ngModel)]="userData" placeholder="update comment here.."> </td>  </tr>
+            <tr><td>Update Rating here :</td><td> <input type="number" [(ngModel)]="userData_rating" placeholder="update rating  here.."></td></tr>
+            <tr><td><input type="reset"> </td> <td><button (click)="updateData()"> click here to update </button></td></tr>
+        </table> 
+        <br>
+        <br>
+        </div>
+    <table align="center" >
+<div *ngFor="let note of notes | async">
+    
+   <tr><td><label> movie : {{ note.movie }}   <button (click)="deleteNote(note.root,note.movie)" ><img height="25px" width="25px"  src="../../../assets/images/delete.png"></button> <button (click)="editNote(note.root,note.movie)" ><img height="25px" width="25px"  src="../../../assets/images/edit.png"></button><p> by : {{ note.user_name}} </p>   </label></tr>
+   
+  <tr> <td><p> Content : </p></td><td><p> {{ note.content }} </p></td> </tr>
+  <tr> <td><p>Likes : </p></td><td><p> {{ note.likes }}   </p></td> </tr>
+  <tr><label></label> </tr>
+  
+   <!-- {{ findAvg(note.likes) }} -->
+
+</div>
+<!-- <tr><td> average: {{ avg }}</td><td><p> out of {{ count }}</p></td></tr> -->
+</table>
+
+
+</div>
+
+<div >
+
+ 
+
+
+
+
+
+</div>
+
+
+<!-- <hr><hr><hr> -->
+
+    <!-- this is for display single doc in collectin  -->
+
+
+    <!-- <input type="text" [(ngModel)]="del">  <input type="submit"  (click)="singledata()" > -->
+
+
+
+<!-- <h3>  {{ notesingle | async | json }} </h3> -->
+
+
+<!-- <p>only in id {{del}}</p> -->
+
+
+
+
+<!-- <hr> -->
+
+
+
+
+<!-- <hr><hr><hr><hr> -->
+
+
+
+
+<!-- <video width="1280" height="720" controls>
+<source src="C:\Users\JAYA KRISHNA\Desktop\treat.mp4" type="video/mp4">
+
+</video> -->
+                <!-- <div class="video">
+                    <video controls (click)="toggleVideo()" id="videoPlayer" width="400" height="200">
+                        <source src="../../../assets/images/treat.mp4" type="video/mp4" />
+                        Browser not supported
+                    </video>
+                    </div> -->
+
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/madsiEmiEZo?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+
+
+
+
+
+    <!-- <iframe src="https://www.imdb.com/videoembed/vi3601382169" allowfullscreen width="854" height="400"></iframe> -->
+    
+    <!-- <iframe src="https://www.imdb.com/videoembed/vi528070681" allowfullscreen width="854" height="400"></iframe> -->
+   
+    <!-- <hr><hr><hr><hr><hr><hr><hr> -->
+</body> 

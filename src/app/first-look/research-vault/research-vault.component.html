@@ -1,0 +1,264 @@
+
+
+<div  [hidden]="userauth" >
+
+  
+<h1 class="header">Hey user you have to login first to watch Research vault </h1>
+
+
+
+
+</div>
+
+<div [hidden]="!userauth" >
+<h1>welcome user {{ this.username }} </h1>
+
+<div class="res_body">
+  <!-- <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Movie League</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </div>
+    </nav>   -->
+<div class="container">
+<h2>Research Vault</h2>
+<hr>
+<table class="table table-striped">
+  <thead>
+    <tr align = "center" >
+      <th colspan="2"></th> 
+      <th></th>
+      <th>AVG FML <br> SCREENS</th>
+      <th>%<br> USED</th>
+      <th>AVG FML <br> SCREENS</th>
+      <th>%<br> USED</th>
+      <th>AVG FML <br> SCREENS</th>
+      <th>%<br> USED</th>
+      <th>AVG FML <br> SCREENS</th>
+      <th>%<br> USED</th>
+      <th>AVG FML <br> SCREENS</th>
+      <th>%<br> USED</th>
+      <th>AVG FML <br> SCREENS</th>
+      <th>%<br> USED</th>
+     
+    </tr>
+  </thead>
+  <tbody align = "center" >
+    <tr width="180" height="70" align="center">
+    <h3>1</h3>
+     <td><img src="assets/images/infinty.jpeg" width="32" height="48"/></td>
+      <td><font color="red">FRI-Avengers:Infinity War</font></td>
+      <td >0.8</td>
+      <td>58.8%</td>
+      <td>0.5</td>
+      <td>50.9%</td>
+      <td>0.8</td>
+      <td>58.8%</td>
+      <td>-</td>
+      <td>-</td>
+      <td>0.8</td>
+      <td>54.6%</td>
+      <td>2.5</td>
+      <td>52.6%</td>
+    </tr>
+    <tr width="180" height="70">
+        <h3>2</h3>
+      <td><img src="../../../assets/images/infinty.jpeg" width="32" height="48"/></td>
+      <td><font color="red">SAT-Avengers:Infinity War</font></td>
+      <td>0.5</td>
+      <td>50.9%</td>
+      <td>-</td>
+      <td>-</td>
+      <td>0.8</td>
+      <td>48.7%</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1.8</td>
+      <td>61.6%</td>
+      <td>1.5</td>
+      <td>56.6%</td>
+      
+    </tr>
+    <tr width="180" height="70">     
+       <h3>3</h3>
+<td><img src="../../../assets/images/qp_53.jpg" width="32" height="48"></td>
+        <td><font color="red">A Quiet Place</font></td>
+      <td>-</td>
+      <td>-</td> <td>0.8</td>
+      <td>58.8%</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1.8</td>
+      <td>54.6%</td>
+      <td>1.5</td>
+      <td>52.6%</td>
+      <td>1.3</td>
+      <td>49.6%</td>
+    </tr>
+    <tr width="180" height="70">
+        <h3>4  </h3>
+        <td><img src="../../../assets/images/ifp.jpg" width="32" height="48"></td>
+        <td><font color="red">I Feel Pretty</font></td>
+        <td>0.8</td>
+        <td>58.8%</td>
+        <td>0.5</td>
+        <td>50.9%</td>
+        <td>0.8</td>
+        <td>58.8%</td>
+        <td>-</td>
+        <td>-</td>
+        <td>1.8</td>
+        <td>54.6%</td>
+        <td>2.5</td>
+        <td>52.6%</td>
+      </tr>
+      <tr width="180" height="70">
+          <h3>5</h3>
+          <td><img src="../../../assets/images/ob.jpg" width="32" height="48"></td>
+          <td><font color="red">Overboard</font></td>
+        <td>0.5</td>
+        <td>50.9%</td>
+        <td>-</td>
+        <td>-</td>
+        <td>0.8</td>
+        <td>48.7%</td>
+        <td>2.3</td>
+        <td>52.9</td>
+        <td>2.8</td>
+        <td>61.6%</td>
+        <td>1.5</td>
+        <td>49.6%</td>
+        
+      </tr>
+      <tr width="180" height="70">
+          <h3>6</h3>
+          <td><img src="../../../assets/images/tull.jpg" width="32" height="48"></td>
+          <td><font color="red">Tully</font></td>
+        <td>-</td>
+        <td>-</td> <td>0.8</td>
+        <td>58.8%</td>
+        <td>-</td>
+        <td>-</td>
+        <td>1.8</td>
+        <td>54.6%</td>
+        <td>1.5</td>
+        <td>52.6%</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr width="180" height="70">
+          <h3>7</h3>          
+          <td><img src="../../../assets/images/traffik.jpg" width="32" height="48"></td>
+          <td><font color="red">Traffik</font></td>
+          <td>0.8</td>
+          <td>58.8%</td>
+          <td>0.5</td>
+          <td>50.9%</td>
+          <td>0.8</td>
+          <td>58.8%</td>
+          <td>-</td>
+          <td>-</td>
+          <td>1.8</td>
+          <td>54.6%</td>
+          <td>2.5</td>
+          <td>52.6%</td>
+        </tr>
+        <tr width="180" height="70">
+            <h3>8</h3>          
+            <td><img src="../../../assets/images/s2.jpg" width="32" height="48"></td>
+            <td><font color="red">Super Troopers 2</font></td>
+          <td>0.5</td>
+          <td>50.9%</td>
+          <td>-</td>
+          <td>-</td>
+          <td>0.8</td>
+          <td>48.7%</td>
+          <td>-</td>
+          <td>-</td>
+          <td>1.8</td>
+          <td>61.6%</td>
+          <td>1.5</td>
+          <td>56.6%</td>
+          
+        </tr>
+        <tr width="180" height="70">
+            <h3>9</h3>                      
+            <td><img src="../../../assets/images/infinty.jpeg" width="32" height="48"></td>
+            <td><font color="red">SUN- Avengers:Infinity War</font></td>
+          <td>-</td>
+          <td>-</td> <td>0.8</td>
+          <td>58.8%</td>
+          <td>-</td>
+          <td>-</td>
+          <td>1.8</td>
+          <td>54.6%</td>
+          <td>1.5</td>
+          <td>52.6%</td>
+          <td>1.3</td>
+          <td>49.6%</td>
+        </tr>
+               
+            <tr width="180" height="70">
+                <h3>10</h3>   
+            <td><img src="../../../assets/images/blo.jpg" width="32" height="48"></td>
+            <td><font color="red">Blockers</font></td>
+            <td>0.8</td>
+            <td>58.8%</td>
+            <td>0.5</td>
+            <td>50.9%</td>
+            <td>0.8</td>
+            <td>58.8%</td>
+            <td>-</td>
+            <td>-</td>
+            <td>1.8</td>
+            <td>54.6%</td>
+            <td>2.5</td>
+            <td>52.6%</td>
+          </tr>
+          <tr width="180" height="70">
+              <h3>11</h3>   
+              <td><img src="../../../assets/images/bp.jpg" width="32" height="48"></td>
+              <td><font color="red">Black Panther</font></td>
+            <td>0.5</td>
+            <td>50.9%</td>
+            <td>-</td>
+            <td>-</td>
+            <td>0.8</td>
+            <td>48.7%</td>
+            <td>-</td>
+            <td>-</td>
+            <td>1.8</td>
+            <td>61.6%</td>
+            <td>1.5</td>
+            <td>56.6%</td>
+            
+          </tr>
+          <tr width="180" height="70" align="center">
+              <h3>12</h3>     
+            <td><img src="../../../assets/images/ramp.jpg" width="32" height="48"></td>
+              <td><font color="red">Rampage</font></td>
+            <td>-</td>
+            <td>-</td> <td>0.8</td>
+            <td>58.8%</td>
+            <td>-</td>
+            <td>-</td>
+            <td>1.8</td>
+            <td>54.6%</td>
+            <td>1.5</td>
+            <td>52.6%</td>
+            <td>1.3</td>
+            <td>49.6%</td>
+          </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+
