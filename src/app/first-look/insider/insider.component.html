@@ -3,16 +3,44 @@
 
 
 
-<div  [hidden]="userauth" >
+<div  [hidden]="!userauth" >
 
   <h1 class="header" style="text-align: center">hay user you have to login first </h1>
 
 </div>
 
-<div [hidden]="!userauth" >
+<div [hidden]="userauth"  >
 
-<h1> welcome user  : {{ this.username }}....!</h1>
-<div class="container class1" >
+<!-- <h1> welcome user  : {{ this.username }}....!</h1> -->
+
+
+<div class="flex-container" >
+	
+	
+  <div *ngFor="let item of arrayOne(num1); let i = index;">
+    <div><img class="button" (click)="open(content)" src="{{'https://image.tmdb.org/t/p/w500'+data1.results[i].poster_path}}"  alt="" width="200" height="300"> </div>
+    <!-- <button class="btn btn-primary" (click)="open(content)"><h3>{{data1.results[i].title}} </h3></button> -->
+  <!-- <div class="thumbnail"> -->
+  <!-- <div>
+    <img src="{{'https://image.tmdb.org/t/p/w500'+data1.results[i].poster_path}}" alt="" width="200" height="200"> 
+</div> -->
+
+
+<ng-template #content let-c="close" let-d="dismiss">
+<div class="modal-header">
+  <h4 class="modal-title">{{data1.results[i].title}}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+<p>{{data1.results[i].overview}}</p>
+</div>
+</ng-template>
+</div>
+</div>
+
+<!-- <div class="container class1" >
     <div *ngFor="let item of arrayOne(num1); let i = index;">
     <div class="thumbnail">
     <div>
@@ -48,7 +76,7 @@
     </div>
     </div>
     
-    
+     -->
     
 
 </div>

@@ -1,4 +1,5 @@
 
+
 <div [hidden]="userauth" >
   
     <h1 class="header" style="text-align: center" > hay user you have to login first </h1>
@@ -12,7 +13,7 @@
 
 
 
-<div  [hidden]="!userauth" >
+<div  [hidden]="!userauth" class="bgm" >
 
      
   <!--  to get user data from query  -->
@@ -23,13 +24,13 @@
             </div>
 
             <!--  up to here .. -->
-    <h1> welcome user  : {{ this.username }}....!</h1>
+    <h1 class="text-color" > welcome user  : {{ this.username }}....!</h1>
 
     <div class="alert alert-danger alert-dismissible"   [hidden]="!overload" >
         
        <h1><strong>Warning..!</strong> This user only select only maxium of 8 movies per week</h1> 
       </div>
-      <p  style="text-align: center" > Grid update Date  : {{ time_date_now  }}</p>
+      <p  style="text-align: center; color: white;" > Grid update Date  : {{ time_date_now  }}</p>
     <div class="main">
     
       <div class="grid-container"  > 
@@ -89,17 +90,18 @@
                           <!-- <h3 class="h3-color"  (click)="removeItem($event)" id=7>{{ this.movies[7]}}</h3> -->
                           <img class="leftimg" *ngIf = "this.movies[7]" (click)="removeItem($event)" id = "7"  src="{{'https://image.tmdb.org/t/p/w500'+data1.results[this.movies[7]].poster_path}}" alt="" width="95" height="195">
                         </div>
-
-                        <button  [hidden]="save_status" type="button"   class="button buttonsubmit" (click)="sendData()" ><h4 style=" text-align: center"> save</h4></button>
+                        
+                        <button mat-raised-button color="primary"  [hidden]="save_status" type="button"   (click)="sendData()">Save</button>
+                       
                         <p [hidden]="!save_status" >  changes are  saved.... </p>
                     </div>
 
-    <div style="height:500px;line-height:10em;overflow-x:hidden;padding:5px">
+    <div style="height:500px;line-height:10em;overflow:auto;padding:5px">
       <div class="wrapper"  >
           
           <div class="nested">
               <div *ngFor="let item of arrayOne(num1); let i = index;"  >
-                  <img  class="rtimg" (click)="onclick($event)" id = "{{i}}"  src="{{'https://image.tmdb.org/t/p/w500'+data1.results[i].poster_path}}" alt="" width="150" height="150">
+                  <img  class="rtimg" (click)="onclick($event)" id = "{{i}}"  src="{{'https://image.tmdb.org/t/p/w500'+data1.results[i].poster_path}}" alt="" width="118" height="140">
 
                   <!-- <p (click)="onclick($event)" id = "{{i}}">{{data1.results[i].title}}</p> -->
                 </div>
@@ -111,5 +113,4 @@
        
          </div>
 
-         <button mat-raised-button color="primary">Primary</button>
         

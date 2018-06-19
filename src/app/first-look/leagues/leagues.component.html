@@ -15,7 +15,7 @@
 
         <h1>Reviews</h1>
 
-    <table border="1" align="center" >
+     <table border="1" align="center" >
 
         <label>Please Register For Feedback</label> 
         <form  >   
@@ -30,7 +30,30 @@
       
       </form>
 
-      </table>
+      </table> 
+
+      <!-- <mat-card>
+
+        <mat-card-header>Please register for feedback</mat-card-header>
+
+        <br>
+
+        <mat-card-content>
+
+            <form  >   
+        <tr> <td>Movie Na</td>me:</td><td><input name="uname" [(ngModel)]="Nusername" placeholder="movie name"></td>
+        </tr>
+        <tr> <td>Comments:</td><td><input name="content" [(ngModel)]="Ncontent" placeholder="Eg:Awesome!"></td>
+        </tr>
+        <tr> <td>Rating:</td><td><input  name="likes" type="number" [(ngModel)]="Nlikes" placeholder="Eg:10"></td>
+        </tr>
+        <tr><td><input type="reset"></td><td><input   type="submit" (click)="newUser()"></td></tr>
+      
+      
+      </form>
+
+        </mat-card-content>
+      </mat-card> --> 
 
       <br><br>
       <div [hidden]="update_bit" align = "center" >

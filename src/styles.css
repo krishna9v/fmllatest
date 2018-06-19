@@ -7,3 +7,12 @@
     /* background-color: (200,0,0); */
     text-align: center;
 }
+.bgm{
+
+    /* background: #F15F79; */
+    background-image: url("https://www.hdwallpapers.in/download/deep_space_4k-3840x2160.jpg");
+
+}
+.text-color{
+     color: white;
+}
